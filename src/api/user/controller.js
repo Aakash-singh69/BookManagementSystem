@@ -28,7 +28,7 @@ exports.userLogin = async (req, res) => {
       }
       res.status(200).json({ message: "Welcome User" });
     } catch (e) {
-      res.status(400).send(err);
+      res.status(400).send(e);
     }
   };
   

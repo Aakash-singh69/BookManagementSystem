@@ -13,20 +13,20 @@ router.get("/user",(req,res)=>{
 })
 
 
-router.post("/adduser",createUserData)
+router.post("/user/adduser",createUserData)
 
-router.post("/login", userLogin);
+router.post("/user/login", userLogin);
 
-router.get("/logout", userLogout);
+router.get("/user/logout", userLogout);
 
-router.patch("/:userName/add_book_liked/:bookId", userAddToLiked);
+router.patch("/user/:userName/add_book_liked/:bookId", userAddToLiked);
 
-router.patch("/:userName/add_book_later/:bookId", userAddToReadLater);
+router.patch("/user/:userName/add_book_later/:bookId", userAddToReadLater);
 
-router.get("/:userName/liked-books",userAllLiked)
+router.get("/user/:userName/liked-books",userAllLiked)
 
-router.get("/:userName/read-later-books",userAllReadLater)
+router.get("/user/:userName/read-later-books",userAllReadLater)
 
-router.get("/books/:bookId",userGetSpecificBook)
+router.get("/user/:bookId",userGetSpecificBook)
 
 module.exports=router
